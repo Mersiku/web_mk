@@ -1,21 +1,23 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using web_mk.DAL;
 //using web_mk.Models;
 
 namespace web_mk.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        FilmsContext db;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(FilmsContext db)
         {
-            _logger = logger;
+            this.db = db;
         }
 
         public IActionResult Index()
         {
-            return View();
+            var kategorie = db.Categories.ToList();
+            return View(kategorie);
         }
 
         public IActionResult Privacy()
@@ -23,10 +25,10 @@ namespace web_mk.Controllers
             return View();
         }
 
-        //[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        //public IActionResult Error()
-        //{
-        //    return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        //}
+        public IActionResult footerSites(string viewName){
+            var kategorie = db.Categories.ToList();
+            return View(viewName, kategorie);
+        }
+
     }
 }
