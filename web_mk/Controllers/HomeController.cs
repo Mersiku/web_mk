@@ -17,7 +17,7 @@ namespace web_mk.Controllers
         public IActionResult Index()
         {
             var kategorie = db.Categories.ToList();
-            return View(kategorie);
+            return View(/*kategorie*/);
         }
 
         public IActionResult Privacy()
@@ -27,7 +27,7 @@ namespace web_mk.Controllers
 
         public IActionResult footerSites(string viewName){
             var kategorie = db.Categories.ToList();
-            return View(viewName, kategorie);
+            return View(viewName/* ,kategorie*/);
         }
 
     }
