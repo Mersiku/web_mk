@@ -6,17 +6,21 @@
 <table class="table table-striped">
     <thead>
         <tr>
+            <th>Plakat</th>
             <th>Tytuł filmu</th>
             <th>Reżyser</th>
             <th>Opis</th>
             <th>Cena</th>
-            <th></th>
+            <th>Szczegóły</th>
         </tr>
     </thead>
     <tbody>
         @foreach(var film in Model)
         {
             <tr>
+                <td>
+                    <img src="~/posters/@film.Poster" style="width: 150px; height: auto;">
+                </td>
                 <td>@film.Title</td>
                 <td>@film.Director</td>
                 <td>@film.Desc</td>

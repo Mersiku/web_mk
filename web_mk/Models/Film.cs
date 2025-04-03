@@ -16,6 +16,7 @@ namespace web_mk.Models
         public string Desc { get; set; }
 
         public decimal? Price { get; set; } //? <- nie bedzie polem not null, tekstowe domyslnie dozwolone puste, liczbowe odwrotnie
+        public string Poster { get; set; } // grafiki
 
         /* opcja 1 */
         public int CategoryId { get; set; }

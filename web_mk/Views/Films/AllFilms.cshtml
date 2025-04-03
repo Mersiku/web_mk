@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Film>
+
+@{
+    ViewData["Title"] = "Wszystkie Filmy";
+}
+
+<h2 class="text-center mb-4">Wszystkie Filmy</h2>
+
+<div class="container">
+    <div class="row">
+        @foreach (var film in Model)
+        {
+            <div class="col-md-3 mb-4">
+                <div class="card shadow-sm">
+                    <!-- Plakat filmu -->
+                    <img src="~/posters/@film.Poster" style="height: 300px; object-fit: cover;">
+                    <!-- Treść karty -->
+                    <div class="card-body">
+                        <h5 class="card-title">@film.Title</h5>
+                        <p class="card-text">@film.Director</p>
+                        <p class="card-text">Cena: @film.Price zł</p>
+
+                        <!-- Przycisk do szczegółów filmu -->
+                        <a href="@Url.Action("Details", "Films", new { filmId = film.FilmId })" class="btn btn-primary">Szczegóły</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

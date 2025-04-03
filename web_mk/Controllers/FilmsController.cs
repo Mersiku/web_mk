@@ -34,5 +34,12 @@ namespace web_mk.Controllers
             return View(film);
 
         }
+
+        public IActionResult AllFilms()
+        {
+            var films = db.Films.Include(f => f.Category).ToList();
+            return View(films);
+        }
     }
+
 }
