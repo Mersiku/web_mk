@@ -15,6 +15,8 @@
                 <li><b>Cena: </b> @Model.Price</li>
                 <li><b>Opis: </b> @Model.Desc</li>
             </ul>
+
+            <p><a href="@Url.Action("addToCart", "Cart", new {filmId = Model.FilmId})"> KOSZ </a></p>
         </td>
 
     </tr>
