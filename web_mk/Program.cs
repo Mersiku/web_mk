@@ -36,12 +36,6 @@ app.MapControllerRoute(
     );
 
 app.MapControllerRoute(
-    name: "Categories",
-    pattern: "{categoryName}",
-    defaults: new { controller = "Films", action = "FilmsList" }
-    );
-
-app.MapControllerRoute(
     name: "StaticSites",
     pattern: "Info/{viewName}",
     defaults: new {controller = "Home", action = "footerSites"}
@@ -51,6 +45,10 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
-
+app.MapControllerRoute(
+    name: "Categories",
+    pattern: "{categoryName}",
+    defaults: new { controller = "Films", action = "FilmsList" }
+    );
 
 app.Run();

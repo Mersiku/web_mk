@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using web_mk.DAL;
 using web_mk.Infrastructure;
+using web_mk.Models;
 
 namespace web_mk.Controllers
 {
@@ -28,6 +29,18 @@ namespace web_mk.Controllers
 
             return RedirectToAction("Index","Cart");
 
+        }
+
+        public IActionResult RemoveFromCart(int id)
+        {
+            var model = new RemoveViewModel()
+            {
+                itemId = id,
+                itemQuantity = CartManager.RemoveFromCart(HttpContext.Session, id),
+                cartValue = CartManager.GetCartValue(HttpContext.Session)
+            };
+
+            return Json(model);
         }
     }
 }

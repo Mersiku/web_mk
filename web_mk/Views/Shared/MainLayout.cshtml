@@ -46,6 +46,8 @@
   </div>
 </div>
 
+@RenderSection("Scripts", false)
+
 <footer class="container-fluid text-center">
     <a href="@Url.Action("footerSites", "Home", new {viewName = "Omnie"})">O mnie</a>
     <a href="@Url.Action("footerSites", "Home", new {viewName = "MetodyPlatnosci"})">Metody płatności</a>
