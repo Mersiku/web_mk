@@ -7,7 +7,7 @@ namespace web_mk.DAL
     {
         public DbSet<Film> Films { get; set; }
         public DbSet<Category> Categories { get; set; }
-        public FilmsContext(DbContextOptions options) : base(options)
+        public FilmsContext(DbContextOptions<FilmsContext> options) : base(options)
         {
         }
 
