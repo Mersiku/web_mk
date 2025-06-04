@@ -31,26 +31,26 @@ namespace web_mk.DAL
 
             var films = new List<Film>
             {
-                new Film {Poster="poster1.jpg", FilmId = 1, Title = "Mad Max: Fury Road", Director = "George Miller", Desc = "Postapokaliptyczna historia pełna akcji.", CategoryId = 1 },
-                new Film {Poster="poster2.jpg", FilmId = 2, Title = "John Wick", Director = "Chad Stahelski", Desc = "Profesjonalny zabójca wraca do akcji.", CategoryId = 1 },
-                new Film {Poster="poster3.jpg", FilmId = 3, Title = "The Hangover", Director = "Todd Phillips", Desc = "Czterech przyjaciół budzi się po szalonej nocy.", CategoryId = 2 },
-                new Film {Poster="poster4.jpg", FilmId = 4, Title = "Dumb and Dumber", Director = "Peter Farrelly", Desc = "Dwaj nierozgarnięci przyjaciele wyruszają w podróż.", CategoryId = 2 },
-                new Film {Poster="poster5.jpg", FilmId = 5, Title = "Forrest Gump", Director = "Robert Zemeckis", Desc = "Historia niezwykłego życia Forresta Gumpa.", CategoryId = 3 },
-                new Film {Poster="poster6.jpg", FilmId = 6, Title = "Schindler’s List", Director = "Steven Spielberg", Desc = "Oskar Schindler ratuje Żydów podczas II wojny światowej.", CategoryId = 3 },
-                new Film {Poster="poster7.jpg", FilmId = 7, Title = "The Conjuring", Director = "James Wan", Desc = "Demonologowie badają nawiedzone domostwo.", CategoryId = 4 },
-                new Film {Poster="poster8.jpg", FilmId = 8, Title = "It", Director = "Andy Muschietti", Desc = "Grupa dzieci walczy z przerażającym klaunem.", CategoryId = 4 },
-                new Film {Poster="poster9.jpg", FilmId = 9, Title = "Inception", Director = "Christopher Nolan", Desc = "Manipulowanie snami w celu osiągnięcia celu.", CategoryId = 5 },
-                new Film {Poster="poster10.jpg", FilmId = 10, Title = "Interstellar", Director = "Christopher Nolan", Desc = "Podróż przez kosmos w poszukiwaniu nowego domu.", CategoryId = 5 },
-                new Film {Poster="poster11.jpg", FilmId = 11, Title = "The Lord of the Rings", Director = "Peter Jackson", Desc = "Epicka podróż przez Śródziemie.", CategoryId = 6 },
-                new Film {Poster="poster12.jpg", FilmId = 12, Title = "Harry Potter and the Sorcerer’s Stone", Director = "Chris Columbus", Desc = "Chłopiec odkrywa, że jest czarodziejem.", CategoryId = 6 },
-                new Film {Poster="poster13.jpg", FilmId = 13, Title = "Se7en", Director = "David Fincher", Desc = "Detektywi tropią seryjnego mordercę.", CategoryId = 7 },
-                new Film {Poster="poster14.jpg", FilmId = 14, Title = "Gone Girl", Director = "David Fincher", Desc = "Zaginięcie żony ujawnia tajemnice małżeństwa.", CategoryId = 7 },
-                new Film {Poster="poster15.jpg", FilmId = 15, Title = "Toy Story", Director = "John Lasseter", Desc = "Przygody zabawek, które ożywają.", CategoryId = 8 },
-                new Film {Poster="poster16.jpg", FilmId = 16, Title = "Shrek", Director = "Andrew Adamson", Desc = "Ogr ratuje księżniczkę i zakochuje się.", CategoryId = 8 },
-                new Film {Poster="poster17.jpg", FilmId = 17, Title = "The Notebook", Director = "Nick Cassavetes", Desc = "Romantyczna historia dwojga zakochanych.", CategoryId = 9 },
-                new Film {Poster="poster18.jpg", FilmId = 18, Title = "Pride & Prejudice", Director = "Joe Wright", Desc = "Historia miłości Elizabeth Bennet i pana Darcy’ego.", CategoryId = 9 },
-                new Film {Poster="poster19.jpg", FilmId = 19, Title = "Planet Earth", Director = "Alastair Fothergill", Desc = "Zapierające dech w piersiach obrazy natury.", CategoryId = 10 },
-                new Film {Poster="poster20.jpg", FilmId = 20, Title = "The Social Dilemma", Director = "Jeff Orlowski", Desc = "Dokument o wpływie mediów społecznościowych.", CategoryId = 10 }
+                new Film {Poster="poster1.jpg", FilmId = 1, Title = "Mad Max: Fury Road", Director = "George Miller", Desc = "Postapokaliptyczna historia pełna akcji.", Price = 29.99m, CategoryId = 1 },
+                new Film {Poster="poster2.jpg", FilmId = 2, Title = "John Wick", Director = "Chad Stahelski", Desc = "Profesjonalny zabójca wraca do akcji.", Price = 29.99m, CategoryId = 1 },
+                new Film {Poster="poster3.jpg", FilmId = 3, Title = "The Hangover", Director = "Todd Phillips", Desc = "Czterech przyjaciół budzi się po szalonej nocy.", Price = 29.99m, CategoryId = 2 },
+                new Film {Poster="poster4.jpg", FilmId = 4, Title = "Dumb and Dumber", Director = "Peter Farrelly", Desc = "Dwaj nierozgarnięci przyjaciele wyruszają w podróż.", Price = 29.99m, CategoryId = 2 },
+                new Film {Poster="poster5.jpg", FilmId = 5, Title = "Forrest Gump", Director = "Robert Zemeckis", Desc = "Historia niezwykłego życia Forresta Gumpa.", Price = 29.99m, CategoryId = 3 },
+                new Film {Poster="poster6.jpg", FilmId = 6, Title = "Schindler’s List", Director = "Steven Spielberg", Desc = "Oskar Schindler ratuje Żydów podczas II wojny światowej.", Price = 29.99m, CategoryId = 3 },
+                new Film {Poster="poster7.jpg", FilmId = 7, Title = "The Conjuring", Director = "James Wan", Desc = "Demonologowie badają nawiedzone domostwo.", Price = 29.99m, CategoryId = 4 },
+                new Film {Poster="poster8.jpg", FilmId = 8, Title = "It", Director = "Andy Muschietti", Desc = "Grupa dzieci walczy z przerażającym klaunem.", Price = 29.99m, CategoryId = 4 },
+                new Film {Poster="poster9.jpg", FilmId = 9, Title = "Inception", Director = "Christopher Nolan", Desc = "Manipulowanie snami w celu osiągnięcia celu.", Price = 29.99m, CategoryId = 5 },
+                new Film {Poster="poster10.jpg", FilmId = 10, Title = "Interstellar", Director = "Christopher Nolan", Desc = "Podróż przez kosmos w poszukiwaniu nowego domu.", Price = 29.99m, CategoryId = 5 },
+                new Film {Poster="poster11.jpg", FilmId = 11, Title = "The Lord of the Rings", Director = "Peter Jackson", Desc = "Epicka podróż przez Śródziemie.", Price = 29.99m, CategoryId = 6 },
+                new Film {Poster="poster12.jpg", FilmId = 12, Title = "Harry Potter and the Sorcerer’s Stone", Director = "Chris Columbus", Desc = "Chłopiec odkrywa, że jest czarodziejem.", Price = 29.99m, CategoryId = 6 },
+                new Film {Poster="poster13.jpg", FilmId = 13, Title = "Se7en", Director = "David Fincher", Desc = "Detektywi tropią seryjnego mordercę.", Price = 29.99m, CategoryId = 7 },
+                new Film {Poster="poster14.jpg", FilmId = 14, Title = "Gone Girl", Director = "David Fincher", Desc = "Zaginięcie żony ujawnia tajemnice małżeństwa.", Price = 29.99m, CategoryId = 7 },
+                new Film {Poster="poster15.jpg", FilmId = 15, Title = "Toy Story", Director = "John Lasseter", Desc = "Przygody zabawek, które ożywają.", Price = 29.99m, CategoryId = 8 },
+                new Film {Poster="poster16.jpg", FilmId = 16, Title = "Shrek", Director = "Andrew Adamson", Desc = "Ogr ratuje księżniczkę i zakochuje się.", Price = 29.99m, CategoryId = 8 },
+                new Film {Poster="poster17.jpg", FilmId = 17, Title = "The Notebook", Director = "Nick Cassavetes", Desc = "Romantyczna historia dwojga zakochanych.", Price = 29.99m, CategoryId = 9 },
+                new Film {Poster="poster18.jpg", FilmId = 18, Title = "Pride & Prejudice", Director = "Joe Wright", Desc = "Historia miłości Elizabeth Bennet i pana Darcy’ego.", Price = 29.99m, CategoryId = 9 },
+                new Film {Poster="poster19.jpg", FilmId = 19, Title = "Planet Earth", Director = "Alastair Fothergill", Desc = "Zapierające dech w piersiach obrazy natury.", Price = 29.99m, CategoryId = 10 },
+                new Film {Poster="poster20.jpg", FilmId = 20, Title = "The Social Dilemma", Director = "Jeff Orlowski", Desc = "Dokument o wpływie mediów społecznościowych.", Price = 29.99m, CategoryId = 10 }
             };                                
 
             modelBuilder.Entity<Category>().HasData(categories);

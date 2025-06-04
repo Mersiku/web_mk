@@ -1,23 +1,44 @@
 ﻿@model Film
-<table>
-    <tr>
-        <td>
-            <h2>@Model.Category.Name</h2>
-            @(await Component.InvokeAsync("SideMenu", new {categoryName=Model.Category.Name}))
-        </td>
-        <td>
-            <img src="~/posters/@Model.Poster" style="width: 150px; height: auto;" alt="Grafika @Model.Poster">
-        </td>
-        <td>
-            <ul>
-                <li><b>Tytuł: </b> @Model.Title</li>
-                <li><b>Reżyser: </b> @Model.Director</li>
-                <li><b>Cena: </b> @Model.Price</li>
-                <li><b>Opis: </b> @Model.Desc</li>
-            </ul>
 
-            <p><a href="@Url.Action("addToCart", "Cart", new {filmId = Model.FilmId})"> KOSZ </a></p>
-        </td>
+@section Scripts {
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+}
 
-    </tr>
-</table>
+<h2>@Model.Category.Name</h2>
+
+<div class="row">
+    <div class="col-md-3">
+        @(await Component.InvokeAsync("SideMenu", new { categoryName = Model.Category.Name }))
+    </div>
+
+    <div class="col-md-9">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Plakat</th>
+                    <th>Tytuł</th>
+                    <th>Reżyser</th>
+                    <th>Cena</th>
+                    <th>Opis</th>
+                    <th>Dodaj do koszyka</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <img src="~/posters/@Model.Poster" style="width: 200px; height: auto;" alt="Grafika @Model.Poster" />
+                    </td>
+                    <td>@Model.Title</td>
+                    <td>@Model.Director</td>
+                    <td>@String.Format("{0:0.00} zł", Model.Price)</td>
+                    <td>@Model.Desc</td>
+                    <td>
+                        <a href="@Url.Action("AddToCart", "Cart", new { filmId = Model.FilmId, returnUrl = Url.Action("Details", "Films", new { filmId = Model.FilmId }) })" class="btn btn-sm btn-primary">
+                            🛒 Dodaj
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
